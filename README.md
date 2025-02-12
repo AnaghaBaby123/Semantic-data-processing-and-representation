@@ -1,7 +1,7 @@
-# Semantic-data-processing-and-representation
+# Semantic Data Processing and Representation
 
-This repo contains our work for the course Semantic data processing and representation.
-1. Two presentations of the research papers done during the course --> Word2Vec model and LORA
-2. Classification of Onion dataset ---> 2 files:
-   One using Ensemble methods (CatBoost classifier, Logistic Regression, and RandomForest Classifier) which we got 81% accuracy
-4. Capstone project of your choice.
+This repo contains our work for the course Semantic Data Processing and Representation.
+
+1. [Portfolio 1](./portfolio1/README.md)
+2. [Portfolio 2](./portfolio2/README.md)
+3. [Portfolio 3](./portfolio3/README.md)
