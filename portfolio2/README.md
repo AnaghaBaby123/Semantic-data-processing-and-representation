@@ -6,4 +6,4 @@ The task is to classify whether a given text is from an Onion article or not. Th
 
 2. [Gokul](./gokul/): Fine-tuned the DeBERTa model, achieving 93.31% accuracy.
 
-3. [Chandu](./chandu/): 
+3. [Chandu](./chandu/): Using XGBoost Model and Word2Vec accuracy of 90.9% was achieved.
