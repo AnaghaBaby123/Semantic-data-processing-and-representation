@@ -34,6 +34,32 @@ We fine-tuned the 4-bit version of the **LLaMA 3.2-1B Instruct** model using Hug
 
 The training notebook can be found [here](./unsloth-llama.ipynb).
 
+### Evaluation Metrics
+
+Several intrinsic evaluation metrics were computed:
+
+- **Perplexity** - Measures how well the model predicts the next token in a sequence.
+- **BLEU** (Bilingual Evaluation Understudy) - Measures the overlap between the generated text and the reference text using n-gram precision. 
+- **ROUGE** (Recall-Oriented Understudy for Gisting Evaluation) - Measures recall (and F1) based on n-gram overlap between generated text and reference text.  
+- **BERTScore** - Uses contextual embeddings (BERT) to compare the semantic similarity between the generated and reference texts. 
+
+Each metric offers a different perspective on the model's performance.
+
+```python
+ID: 62, Perplexity: 7.1007
+ID: 63, Perplexity: 12.7885
+ID: 64, Perplexity: 11.0817
+ID: 65, Perplexity: 3.9705
+ID: 66, Perplexity: 4.7665
+
+Average Perplexity: 7.9416 (Range: 0 to infinity, lower is better)
+
+Average BLEU Score: 0.0040 (Range: 0 to 1, higher is better)
+Average ROUGE-1 F1 Score: 0.1536 (Range: 0 to 1, higher is better)
+Average ROUGE-L F1 Score: 0.1025 (Range: 0 to 1, higher is better)
+Average BERTScore F1: 0.4911 (Range: 0 to 1, higher is better)
+```
+
 ### Demo
 Check out the live demo of TeSO on Hugging Face Spaces:  
 [TeSO Demo](https://huggingface.co/spaces/gokul-pv/TeSo)
