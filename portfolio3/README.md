@@ -45,20 +45,24 @@ Several intrinsic evaluation metrics were computed:
 
 Each metric offers a different perspective on the model's performance.
 
-```python
+```
 ID: 62, Perplexity: 7.1007
 ID: 63, Perplexity: 12.7885
 ID: 64, Perplexity: 11.0817
 ID: 65, Perplexity: 3.9705
 ID: 66, Perplexity: 4.7665
 
-Average Perplexity: 7.9416 (Range: 0 to infinity, lower is better)
+Average Perplexity: 7.9416 (Range: 1 to infinity, lower is better)
 
 Average BLEU Score: 0.0040 (Range: 0 to 1, higher is better)
 Average ROUGE-1 F1 Score: 0.1536 (Range: 0 to 1, higher is better)
 Average ROUGE-L F1 Score: 0.1025 (Range: 0 to 1, higher is better)
 Average BERTScore F1: 0.4911 (Range: 0 to 1, higher is better)
 ```
+
+
+The perplexity value suggests that the model is not highly confident in its predictions, which can affect fluency and coherence. Very low BLEU and ROUGE scores indicate that the generated text does not closely match the reference text in terms of exact words or phrases. The moderate BERTScore F1 implies that while the surface-level lexical matching is low, there is some degree of semantic overlap. This might mean the model is capturing some of the underlying intent or meaning even if it doesn’t use the same wording as the reference. Further fine-tuning with more data or targeted human feedback (e.g., RLHF) might help in reducing perplexity and improving lexical overlap. Creating a gold standard dataset which is a collection of high-quality, human-annotated reference outputs (by domain experts) can serve as the benchmark for evaluating model performance. It is carefully curated to be as close as possible to the desired outputs.
+
 
 ### Demo
 Check out the live demo of TeSO on Hugging Face Spaces:  
