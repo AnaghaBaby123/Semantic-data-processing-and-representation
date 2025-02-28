@@ -3,7 +3,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, TextStreamer
 
 # Initialize model and tokenizer
-MODEL_PATH = "gokul-pv/Llama-3.2-1B-Instruct-16bit-TeSO"
+MODEL_PATH = "gokul-pv/Llama-3.2-1B-Instruct-16bit-CodeArchitect"
 
 def load_model():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
@@ -91,7 +91,7 @@ def analyze_architecture(code_input, temperature=1.5, max_tokens=512):
 # Create Gradio interface
 def create_gradio_interface():
     with gr.Blocks() as demo:
-        gr.Markdown("# Tech Stack Optimizer - TeSO")
+        gr.Markdown("# Code Architect")
         
         with gr.Row():
             with gr.Column():
