@@ -15,7 +15,7 @@ The dataset can be found [here](https://huggingface.co/datasets/gokul-pv/CodeArc
 
 ### Training the Model
 
-We fine-tuned the 4-bit version of the **LLaMA 3.2-1B Instruct** model using Hugging Face, the Unsloth library, and LoRA. The model was trained for 3 epochs with a learning rate of 2e-5 and a linear schedule. Unsloth’s `train_on_responses_only` was used to train only on assistant responses while ignoring the loss on user inputs. Finally, the model was saved in 16-bit precision. The trained model can be found [here](gokul-pv/Llama-3.2-1B-Instruct-16bit-CodeArchitect).
+We fine-tuned the 4-bit version of the **LLaMA 3.2-1B Instruct** model using Hugging Face, the Unsloth library, and LoRA. The model was trained for 3 epochs with a learning rate of 2e-5 and a linear schedule. Unsloth’s `train_on_responses_only` was used to train only on assistant responses while ignoring the loss on user inputs. Finally, the model was saved in 16-bit precision. The trained model can be found [here](https://huggingface.co/gokul-pv/Llama-3.2-1B-Instruct-16bit-CodeArchitect).
 
 
 <table>
@@ -65,8 +65,7 @@ The perplexity value suggests that the model is not highly confident in its pred
 
 
 ### Demo
-Check out the live demo of Code Architect on Hugging Face Spaces:  
-[Code Architect Demo](https://huggingface.co/spaces/gokul-pv/CodeArchitect)
+Check out the live demo of Code Architect on Hugging Face Spaces: [Code Architect Demo](https://huggingface.co/spaces/gokul-pv/CodeArchitect)
 
 As the app is running on a CPU in Hugging Face Spaces, the response time may be slow. You can run the app locally by cloning the repository and executing `gradio app.py` for CPU inference or `gradio inference.py` for GPU inference.
 
